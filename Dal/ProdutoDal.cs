@@ -53,8 +53,8 @@ namespace Dal
         }
         public T getByAllDapper(int id)
         {
-            var tableName = typeof(T).GetCustomAttribute<TableAttribute>().Name;//pega nome da tabela
-            //que foi definido no objeto pelo parameto do dapper
+            var tableName = typeof(T).GetCustomAttribute<TableAttribute>().Name;
+            //pega nome da tabela que foi definido no objeto pelo parameto do dapper
 
             string sql = $@"select * from {tableName}";
 
