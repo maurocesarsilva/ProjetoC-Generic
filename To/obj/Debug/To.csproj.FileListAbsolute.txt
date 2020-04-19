@@ -1,0 +1,14 @@
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\To.dll
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\To.pdb
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\obj\Debug\To.csproj.CoreCompileInputs.cache
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\obj\Debug\To.dll
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\obj\Debug\To.pdb
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\obj\Debug\To.csprojAssemblyReference.cache
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\Dapper.Contrib.dll
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\Dapper.dll
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\Dapper.Tvp.dll
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\DapperExtensions.dll
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\Dapper.xml
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\Dapper.Contrib.xml
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\bin\Debug\DapperExtensions.pdb
+C:\Users\maurocésar\Desktop\Projeto\projeto\To\obj\Debug\To.csproj.CopyComplete
