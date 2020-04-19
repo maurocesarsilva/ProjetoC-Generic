@@ -69,8 +69,13 @@
       <Project>{0c3787e9-3a5d-4b9c-b6ad-c5d2e51b7386}</Project>
       <Name>To</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{0d7e77eb-fafc-4aff-80e1-5aabafe3989a}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

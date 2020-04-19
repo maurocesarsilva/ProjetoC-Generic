@@ -1,0 +1,4 @@
+Projeto Base
+*Metodos dapper genericos
+*Tabela Tvp, mostra como cria
+*Pega parametro que mostra o nome da classe

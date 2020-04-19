@@ -32,6 +32,10 @@ namespace bll
         {
             return _produtoDal.getProdutoTvp(IDs);
         }
+        public List<ProdutoTO> getAll(FiltroPaginacao filtroPag)
+        {
+            return _produtoDal.getAll(filtroPag);
+        }
         public List<ProdutoTO> getAll()
         {
             return _produtoDal.getAll();

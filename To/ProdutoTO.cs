@@ -18,6 +18,7 @@ namespace To
         public int id { get; set; }
         public string nome { get; set; }
         public double? valor { get; set; }
+        public int qtdReg { get; set; }
 
     }
 }

@@ -50,6 +50,14 @@ namespace Dal
               */
         }
 
+        public List<T> getAll(FiltroPaginacao filtroPag)
+        {
+            var tableName = typeof(T).GetCustomAttribute<TableAttribute>().Name;
+            //string query = $@"Select * {filtroPag.GetOver()} from {tableName} {filtroPag.GetFetchNext()}";
+            string query = $@"Select * {filtroPag.GetOver()} from {tableName}";
+
+            return conn.Query<T>(query).ToList();
+        }
         public List<T> getAll()
         {
             return conn.GetAll<T>().ToList();
