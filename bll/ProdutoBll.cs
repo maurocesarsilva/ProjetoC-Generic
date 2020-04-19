@@ -10,10 +10,10 @@ namespace bll
 {
     public class ProdutoBll
     {
-       private ProdutoDal<ProdutoTO> _produtoDal;
+       private GenericDal<ProdutoTO> _produtoDal;
         public ProdutoBll()
         {
-            _produtoDal = new ProdutoDal<ProdutoTO>();
+            _produtoDal = new GenericDal<ProdutoTO>();
         }
 
         public void cadastrarProduto(ProdutoTO produto)

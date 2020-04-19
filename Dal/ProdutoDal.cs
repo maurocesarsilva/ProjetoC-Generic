@@ -8,11 +8,13 @@ using Dapper.Contrib.Extensions;
 using Dapper;
 using System.Reflection;
 
+//https://medium.com/@felipesibh/reposit%C3%B3rio-gen%C3%A9rico-com-dapper-4aa53a4e82a0
+//Link doc dapper metos genericos
 namespace Dal
 {
-    public class ProdutoDal<T> : DBConn where T : class
+    public class GenericDal<T> : DBConn where T : class
     {
-        public ProdutoDal()
+        public GenericDal()
         {
 
         }
@@ -32,13 +34,20 @@ namespace Dal
         public List<T> getProdutoTvp(List<int> IDs)
         {
             var tabelaTVP = GetGenericTVP(IDs.ToArray());
-            var tableName = typeof(T).GetCustomAttribute<TableAttribute>();
 
-            string sqlQuery = $@"select * from {tableName} c
+            string sqlQuery = $@"select * from cadProduto c
                                INNER JOIN @tvp t on t.id = c.id";
 
-            var retorno = conn.Query<T>(sqlQuery,new { tvp = tabelaTVP.AsTableValuedParameter(_TVPType), tableName }, commandTimeout: int.MaxValue).ToList();
+            var retorno = conn.Query<T>(sqlQuery, new { tvp = tabelaTVP.AsTableValuedParameter(_TVPType) }, commandTimeout: int.MaxValue).ToList();
             return retorno;
+            /*
+             Para Tvp funcionar é preciso criar uma tabela temporario no sql server
+             Tabela:
+              CREATE TYPE GenericTVP AS TABLE
+              ( Id bigint NULL)
+              //Preciso na tablea tvp temporaria ter os mesmos parametros criados no data table do metodo  
+              GetGenericTVP() da linha 34
+              */
         }
 
         public List<T> getAll()
@@ -58,7 +67,7 @@ namespace Dal
 
             string sql = $@"select * from {tableName}";
 
-            var retorno =  conn.Query<T>(sql).ToList();
+            var retorno = conn.Query<T>(sql).ToList();
 
             return retorno.FirstOrDefault();
         }
